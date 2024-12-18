@@ -7,7 +7,7 @@ similarity = pickle.load(open('similarity.pkl','rb'))
 
 #Fetch poster function
 def fetch_poster(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=c99861f911415b91de843545bee557d8&language=en-US".format(movie_id)
+    url = "https://api.themoviedb.org/3/movie/{}?api_key=[your_api_key]&language=en-US".format(movie_id)
     response = requests.get(url)
     data = response.json()
     poster_path = data['poster_path']
